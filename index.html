@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- cdn link  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="google">
+        <div class="google_img">
+            <img src="google.png" alt="google">
+        </div>
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="search" name="google" id="search" placeholder="Search Google or type a URL">
+            <img src="mic.png" id="btn" alt="" class="voice">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let Search_input = document.getElementById("search");
+    Search_input.addEventListener('keydown', function (event) {
+        let btn_search = document.getElementById("btn").click();
+        let Search_query = Search_input.value;
+        if (event.key === "Enter") {
+            if (Search_query !== "") {
+                let query_pass = "https://www.google.com/search?q=";
+                let final_query = query_pass.concat(Search_query);
+                location.assign(final_query);
+
+            }
+        }
+    })
+
+
+
+
+
+</script>
